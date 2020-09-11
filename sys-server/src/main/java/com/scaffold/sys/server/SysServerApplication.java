@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author wuyiliang
  * @date 2020/9/11 14:26
  */
-@EnableDubbo
+@EnableDubbo(scanBasePackages = {"com.scaffold.sys.server.provider"})
 @SpringBootApplication
 public class SysServerApplication {
 

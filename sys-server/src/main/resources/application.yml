@@ -14,7 +14,7 @@ dubbo:
   application:
     name: sys-server
   registry:
-    address: 47.107.119.14:2182
+    address: 127.0.0.1:2181
     protocol: zookeeper
     check: false
   protocol:

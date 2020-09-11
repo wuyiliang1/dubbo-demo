@@ -10,8 +10,9 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class TestService {
-    @Reference
-    TestApi testApi;
+
+    @Reference()
+    private TestApi testApi;
 
     public String test1(String str) {
         return testApi.test(str);
