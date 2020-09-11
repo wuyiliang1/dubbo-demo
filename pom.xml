@@ -12,6 +12,7 @@
         <module>sys-client</module>
         <module>sys-server</module>
         <module>common</module>
+        <module>test-server</module>
     </modules>
 
 
