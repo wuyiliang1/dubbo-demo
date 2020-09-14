@@ -24,4 +24,7 @@ public class BaseEntity implements Serializable {
 
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateDate;
+
+    @TableField(fill = FieldFill.INSERT)
+    private Integer delFlag;
 }
