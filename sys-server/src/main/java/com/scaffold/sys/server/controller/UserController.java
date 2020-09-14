@@ -1,5 +1,7 @@
 package com.scaffold.sys.server.controller;
 
+import com.scaffold.sys.server.service.TokenService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
+    @Autowired
+    private TokenService tokenService;
 
 
 }

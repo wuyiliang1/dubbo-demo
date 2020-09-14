@@ -78,6 +78,13 @@
             <version>1.2.70</version>
         </dependency>
 
+        <!--jwt-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+
         <dependency>
             <groupId>com.scaffold</groupId>
             <artifactId>scaffold-common</artifactId>
