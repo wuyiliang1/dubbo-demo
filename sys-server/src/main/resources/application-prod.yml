@@ -2,7 +2,7 @@ spring:
   application:
     name: sys-server
   datasource:
-    url: jdbc:mysql://47.107.119.14/blockchain?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://47.107.119.14:3306/blockchain?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: 123465
     driver-class-name: com.mysql.cj.jdbc.Driver
