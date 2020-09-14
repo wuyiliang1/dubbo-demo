@@ -11,9 +11,11 @@
     <modules>
         <module>sys-client</module>
         <module>sys-server</module>
-        <module>common</module>
+        <module>scaffold-common</module>
         <module>test-server</module>
     </modules>
 
-
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 </project>

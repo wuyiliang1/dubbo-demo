@@ -68,7 +68,7 @@
 
         <dependency>
             <groupId>com.scaffold</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>scaffold-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
