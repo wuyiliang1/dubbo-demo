@@ -1,4 +1,4 @@
-package com.scaffold.sys.server.common.handle;
+package com.scaffold.sys.server.handle;
 
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 

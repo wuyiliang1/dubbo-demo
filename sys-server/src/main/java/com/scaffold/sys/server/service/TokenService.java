@@ -2,6 +2,7 @@ package com.scaffold.sys.server.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.scaffold.sys.server.entity.TokenEntity;
+import io.jsonwebtoken.Claims;
 
 /**
  * @author wuyiliang
@@ -24,4 +25,12 @@ public interface TokenService extends IService<TokenEntity> {
      * @return token
      */
     String createNormalToken(Long userId);
+
+    /**
+     *  token校验
+     *
+     * @param token token
+     * @return Claims
+     */
+    Claims validateToken(String token);
 }

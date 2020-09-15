@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: sys-server
   datasource:
     url: jdbc:mysql://47.107.119.14:3306/scaffold?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root

@@ -1,4 +1,4 @@
-package com.scaffold.sys.server.common.config;
+package com.scaffold.sys.server.config;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;

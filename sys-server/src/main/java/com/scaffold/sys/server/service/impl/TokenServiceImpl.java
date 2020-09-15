@@ -1,17 +1,16 @@
 package com.scaffold.sys.server.service.impl;
 
+import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.scaffold.common.exception.BizException;
 import com.scaffold.sys.server.dao.TokenDao;
 import com.scaffold.sys.server.entity.TokenEntity;
 import com.scaffold.sys.server.service.TokenService;
-import io.jsonwebtoken.JwtBuilder;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.*;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author wuyiliang
@@ -25,6 +24,8 @@ public class TokenServiceImpl extends ServiceImpl<TokenDao, TokenEntity> impleme
      */
     private static final int EXPIRE_TIME = 1000 * 3600 * 24;
     private static final String SIGNING_KEY = "1000 * 3600 * 24";
+    @Value("${spring.application.name:scaffold}")
+    private static String appName;
 
     @Override
     public String createPrimaryToken(Long userId) {
@@ -41,16 +42,29 @@ public class TokenServiceImpl extends ServiceImpl<TokenDao, TokenEntity> impleme
         return JwtHelper.createJwt(userId);
     }
 
+    @Override
+    public Claims validateToken(String token) {
+        return JwtHelper.parseJwt(token);
+    }
+
+
     private static class JwtHelper {
         public static String createJwt(Long userId) {
             long exp = System.currentTimeMillis() + EXPIRE_TIME;
-            Map<String, Object> chaims = new HashMap<>(4);
-            chaims.put("beer", userId);
             JwtBuilder jb = Jwts.builder()
-                    .setClaims(chaims)
+                    .setId(String.valueOf(userId))
+                    .setIssuer(appName)
                     .signWith(SignatureAlgorithm.HS256, SIGNING_KEY)
                     .setExpiration(new Date(exp));
             return jb.compact();
+        }
+
+        public static Claims parseJwt(String token) {
+            Claims claims = Jwts.parser().setSigningKey(SIGNING_KEY).parseClaimsJws(token).getBody();
+            if (!StrUtil.equals(appName, claims.getIssuer())) {
+                throw new BizException("非本系统签发token");
+            }
+            return claims;
         }
     }
 }
