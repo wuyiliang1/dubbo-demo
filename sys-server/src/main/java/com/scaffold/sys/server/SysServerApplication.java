@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2020/9/11 14:26
  */
 @EnableDubbo(scanBasePackages = {"com.scaffold.sys.server.provider"})
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.scaffold.sys.server", "cn.hutool.extra.spring"})
 public class SysServerApplication {
 
     public static void main(String[] args) {
