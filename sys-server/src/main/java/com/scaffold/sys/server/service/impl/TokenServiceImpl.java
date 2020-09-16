@@ -1,8 +1,10 @@
 package com.scaffold.sys.server.service.impl;
 
 import cn.hutool.core.util.StrUtil;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.scaffold.common.exception.BizException;
+import com.scaffold.common.exception.SysStatusCode;
 import com.scaffold.sys.server.dao.TokenDao;
 import com.scaffold.sys.server.entity.TokenEntity;
 import com.scaffold.sys.server.service.TokenService;
@@ -23,7 +25,7 @@ public class TokenServiceImpl extends ServiceImpl<TokenDao, TokenEntity> impleme
      *  默认24小时过期
      */
     private static final int EXPIRE_TIME = 1000 * 3600 * 24;
-    private static final String SIGNING_KEY = "1000 * 3600 * 24";
+    private static final String SIGNING_KEY = "!@#$%scaffold^&*";
     @Value("${spring.application.name:scaffold}")
     private static String appName;
 
@@ -43,7 +45,23 @@ public class TokenServiceImpl extends ServiceImpl<TokenDao, TokenEntity> impleme
     }
 
     @Override
-    public Claims validateToken(String token) {
+    public Claims validatePrimaryToken(String token) {
+        Claims claims = validateNormalToken(token);
+        String userId = claims.getId();
+        if (StrUtil.isNotBlank(userId)) {
+            QueryWrapper<TokenEntity> wrapper = new QueryWrapper<>();
+            wrapper.eq("token", token).eq("user_id", userId);
+
+            TokenEntity tokenEntity = getOne(wrapper);
+            if (tokenEntity != null) {
+                return claims;
+            }
+        }
+        throw new BizException(SysStatusCode.TOKEN_VALIDATE_ERROR);
+    }
+
+    @Override
+    public Claims validateNormalToken(String token) {
         return JwtHelper.parseJwt(token);
     }
 
@@ -62,7 +80,7 @@ public class TokenServiceImpl extends ServiceImpl<TokenDao, TokenEntity> impleme
         public static Claims parseJwt(String token) {
             Claims claims = Jwts.parser().setSigningKey(SIGNING_KEY).parseClaimsJws(token).getBody();
             if (!StrUtil.equals(appName, claims.getIssuer())) {
-                throw new BizException("非本系统签发token");
+                throw new BizException(SysStatusCode.TOKEN_VALIDATE_ERROR);
             }
             return claims;
         }

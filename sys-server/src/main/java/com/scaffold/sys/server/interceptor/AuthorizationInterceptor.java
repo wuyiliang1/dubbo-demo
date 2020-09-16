@@ -49,7 +49,7 @@ public class AuthorizationInterceptor extends HandlerInterceptorAdapter {
         }
 
         // 校验token
-        Claims claims = tokenService.validateToken(token);
+        Claims claims = tokenService.validatePrimaryToken(token);
         //设置userId到request里，后续根据userId，获取用户信息
         request.setAttribute("userId", claims.getId());
 

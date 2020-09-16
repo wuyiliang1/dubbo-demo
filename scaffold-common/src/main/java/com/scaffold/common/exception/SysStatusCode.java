@@ -19,7 +19,8 @@ public enum SysStatusCode {
      *  系统默认错误编码
      */
     SYS_ERROR(100001, "服务繁忙,请稍候再试"),
-    TOKEN_NOT_BLANK(100002, "token不能为空");
+    TOKEN_NOT_BLANK(100002, "token不能为空"),
+    TOKEN_VALIDATE_ERROR(100003, "token校验异常");
 
     private final int code;
 

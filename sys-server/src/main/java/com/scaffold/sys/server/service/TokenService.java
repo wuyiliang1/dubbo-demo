@@ -27,10 +27,18 @@ public interface TokenService extends IService<TokenEntity> {
     String createNormalToken(Long userId);
 
     /**
+     *  唯一token校验
+     *
+     * @param token token
+     * @return Clams
+     */
+    Claims validatePrimaryToken(String token);
+
+    /**
      *  token校验
      *
      * @param token token
      * @return Claims
      */
-    Claims validateToken(String token);
+    Claims validateNormalToken(String token);
 }
