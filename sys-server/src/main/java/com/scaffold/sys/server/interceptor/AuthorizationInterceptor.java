@@ -3,7 +3,7 @@ package com.scaffold.sys.server.interceptor;
 import cn.hutool.core.util.StrUtil;
 import com.scaffold.common.exception.BizException;
 import com.scaffold.common.exception.SysStatusCode;
-import com.scaffold.sys.server.annotation.Login;
+import com.scaffold.sys.server.annotation.TokenFree;
 import com.scaffold.sys.server.service.TokenService;
 import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,17 +25,25 @@ public class AuthorizationInterceptor extends HandlerInterceptorAdapter {
     private TokenService tokenService;
 
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        Login annotation;
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
+        TokenFree annotation;
         if (handler instanceof HandlerMethod) {
-            annotation = ((HandlerMethod) handler).getMethodAnnotation(Login.class);
+            annotation = ((HandlerMethod) handler).getMethodAnnotation(TokenFree.class);
             if (annotation == null){
-                return true;
+                return validateToken(request);
+            } else {
+                return validateSign(request);
             }
         } else {
             return true;
         }
+    }
 
+    private boolean validateSign(HttpServletRequest request) {
+        return true;
+    }
+
+    private boolean validateToken(HttpServletRequest request) {
         //从header中获取token
         String token = request.getHeader("token");
         //如果header中不存在token，则从参数中获取token

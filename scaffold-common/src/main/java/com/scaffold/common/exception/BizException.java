@@ -13,6 +13,8 @@ import lombok.Setter;
 @Setter
 public class BizException extends RuntimeException {
 
+    private static final long serialVersionUID = 1L;
+
     private int code;
 
     private String msg;
@@ -26,11 +28,13 @@ public class BizException extends RuntimeException {
     }
 
     public BizException(SysStatusCode status) {
+        super(status.getMsg());
         this.code = status.getCode();
         this.msg = status.getMsg();
     }
 
     public BizException(int code, String msg) {
+        super(msg);
         this.code = code;
         this.msg = msg;
     }

@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 /**
  * 响应数据
+ * @author wuyiliang
  */
 public class Result<T> implements Serializable {
     private static final long serialVersionUID = 1L;
