@@ -2,7 +2,6 @@ package com.scaffold.sys.server.handle;
 
 import com.scaffold.common.Result;
 import com.scaffold.common.exception.BizException;
-import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

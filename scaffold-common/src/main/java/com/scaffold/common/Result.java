@@ -29,7 +29,7 @@ public class Result<T> implements Serializable {
     }
 
     public boolean success(){
-        return code == 0;
+        return code == 100000;
     }
 
     public Result<T> error() {
