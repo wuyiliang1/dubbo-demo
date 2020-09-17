@@ -13,8 +13,4 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements UserService {
 
-    @Override
-    public String hellp(String str) {
-        return "hello " + str;
-    }
 }

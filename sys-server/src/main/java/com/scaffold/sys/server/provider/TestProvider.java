@@ -17,6 +17,6 @@ public class TestProvider implements TestApi {
 
     @Override
     public String test(String str) {
-        return userService.hellp(str);
+        return "";
     }
 }

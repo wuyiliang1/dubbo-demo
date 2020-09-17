@@ -9,5 +9,4 @@ import com.scaffold.sys.server.entity.UserEntity;
  */
 public interface UserService extends IService<UserEntity> {
 
-    String hellp(String str);
 }
