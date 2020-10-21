@@ -18,6 +18,7 @@
 .gradle
 /build/
 !gradle/wrapper/gradle-wrapper.jar
+!*/src/main/resources/
 
 ### IntelliJ IDEA ###
 .idea
