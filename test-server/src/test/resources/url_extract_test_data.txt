@@ -1,0 +1,44 @@
+这是一段文本开始这是一段文本结束
+这是一段文本开始这是一段文本结束
+
+这是一段文本开始https://github.com/junit-team/junit4/wiki/Parameterized-tests这是一段文本结束
+这是一段文本开始<a href="https://github.com/junit-team/junit4/wiki/Parameterized-tests">https://github.com/junit-team/junit4/wiki/Parameterized-tests</a>这是一段文本结束
+
+这是一段文本开始github.com/junit-team/junit4/wiki/Parameterized-tests这是一段文本结束
+这是一段文本开始<a href="github.com/junit-team/junit4/wiki/Parameterized-tests">github.com/junit-team/junit4/wiki/Parameterized-tests</a>这是一段文本结束
+
+这是一段文本开始https://www.google.com.hk/search?q=junit4+Parameterized&newwindow=1&ei=RosmY5SyEcm12roP7Ii-8Aw&ved=0ahUKEwiU7aSVrp36AhXJmlYBHWyED84Q4dUDCA4&oq=junit4+Parameterized&gs_lcp=Cgdnd3Mtd2l6EAwyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBAgAEB4yBAgAEB4yBAgAEB4yBAgAEB46CggAEEcQ1gQQsANKBAhBGABKBAhGGABQgQFYgQFg4QdoAXABeACAAa8BiAGvAZIBAzAuMZgBAKABAqABAcgBAcABAQ&sclient=gws-wiz#bsht=CgRmYnNtEgYIBBAAGA8
+这是一段文本开始<a href="https://www.google.com.hk/search?q=junit4+Parameterized&newwindow=1&ei=RosmY5SyEcm12roP7Ii-8Aw&ved=0ahUKEwiU7aSVrp36AhXJmlYBHWyED84Q4dUDCA4&oq=junit4+Parameterized&gs_lcp=Cgdnd3Mtd2l6EAwyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBAgAEB4yBAgAEB4yBAgAEB4yBAgAEB46CggAEEcQ1gQQsANKBAhBGABKBAhGGABQgQFYgQFg4QdoAXABeACAAa8BiAGvAZIBAzAuMZgBAKABAqABAcgBAcABAQ&sclient=gws-wiz#bsht=CgRmYnNtEgYIBBAAGA8">https://www.google.com.hk/search?q=junit4+Parameterized&newwindow=1&ei=RosmY5SyEcm12roP7Ii-8Aw&ved=0ahUKEwiU7aSVrp36AhXJmlYBHWyED84Q4dUDCA4&oq=junit4+Parameterized&gs_lcp=Cgdnd3Mtd2l6EAwyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBAgAEB4yBAgAEB4yBAgAEB4yBAgAEB46CggAEEcQ1gQQsANKBAhBGABKBAhGGABQgQFYgQFg4QdoAXABeACAAa8BiAGvAZIBAzAuMZgBAKABAqABAcgBAcABAQ&sclient=gws-wiz#bsht=CgRmYnNtEgYIBBAAGA8</a>
+
+这是一段文本开始https://support.google.com/chrome/bin/answer.py?hl=en-GB&answer=95647&p=cpn_cookies这是一段文本结束
+这是一段文本开始<a href="https://support.google.com/chrome/bin/answer.py?hl=en-GB&answer=95647&p=cpn_cookies">https://support.google.com/chrome/bin/answer.py?hl=en-GB&answer=95647&p=cpn_cookies</a>这是一段文本结束
+
+http://support.mozilla.org/en-US/kb/Cookies.
+<a href="http://support.mozilla.org/en-US/kb/Cookies">http://support.mozilla.org/en-US/kb/Cookies</a>.
+
+这是一段文本开始psirt@hua.com这是一段文本结束
+这是一段文本开始<a href="psirt@hua.com">psirt@hua.com</a>这是一段文本结束
+
+http://support.huawei.com/enterprise/zh/index.html
+<a href="http://support.huawei.com/enterprise/zh/index.html">http://support.huawei.com/enterprise/zh/index.html</a>
+
+这是一段文本开始,(http://support.huawei.com/enterprise/zh/index.html)
+这是一段文本开始,(<a href="http://support.huawei.com/enterprise/zh/index.html">http://support.huawei.com/enterprise/zh/index.html</a>)
+
+(http://support.huawei.com/enterprise/zh/index.html.)
+(<a href="http://support.huawei.com/enterprise/zh/index.html">http://support.huawei.com/enterprise/zh/index.html</a>.)
+
+这是一段文本开始,http://support.huawei.com/enterprise/zh/index.html.这是一段文本结束
+这是一段文本开始,<a href="http://support.huawei.com/enterprise/zh/index.html">http://support.huawei.com/enterprise/zh/index.html</a>.这是一段文本结束
+
+这是一段文本开始，http://consumer.huawei.com/cn/support/这是一段文本结束,
+这是一段文本开始，<a href="http://consumer.huawei.com/cn/support/">http://consumer.huawei.com/cn/support/</a>这是一段文本结束,
+
+这是一段文本开始，https://consumer.huawei.com/cn/phones/?ic_medium=hwdc&ic_source=corp_header_consumer这是一段文本结束
+这是一段文本开始，<a href="https://consumer.huawei.com/cn/phones/?ic_medium=hwdc&ic_source=corp_header_consumer">https://consumer.huawei.com/cn/phones/?ic_medium=hwdc&ic_source=corp_header_consumer</a>这是一段文本结束
+
+这是一段文本开始,https://celia.consumer.huawei.com/official/#/?businessUUID=fe8192189f0a40e8a883ab8bdf1ba8ea,这是一段文本结束
+这是一段文本开始,<a href="https://celia.consumer.huawei.com/official/#/?businessUUID=fe8192189f0a40e8a883ab8bdf1ba8ea">https://celia.consumer.huawei.com/official/#/?businessUUID=fe8192189f0a40e8a883ab8bdf1ba8ea</a>,这是一段文本结束
+
+这是一段文本开始,https://support.huawei.com/carrier/navi?coltype=other#col=other/pigeon,这是一段文本结束
+这是一段文本开始,<a href="https://support.huawei.com/carrier/navi?coltype=other#col=other/pigeon">https://support.huawei.com/carrier/navi?coltype=other#col=other/pigeon</a>,这是一段文本结束
